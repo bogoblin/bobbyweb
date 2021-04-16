@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Garfield Button</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: cursive, sans-serif;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .garfbutton {
+        background-color: orange;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        box-shadow: 2px 2px 5px 0 #00000088;
+        font-size: 2em;
+    }
+    h1 {
+        font-size: 4em;
+    }
+</style>
+
+<body>
+    <h1>Add Garfield to any site!</h1>
+    <iframe width="800" height="500" src="https://www.youtube.com/embed/ac0lrPlR_fg" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a
+        class="garfbutton"
+        href="javascript:(function()%7Bfunction%20callback()%7B0%7Dvar%20s%3Ddocument.createElement(%22script%22)%3Bs.src%3D%22https%3A%2F%2Fbogoblin.com%2Fgarfield%2Fextension.js%22%3Bif(s.addEventListener)%7Bs.addEventListener(%22load%22%2Ccallback%2Cfalse)%7Delse%20if(s.readyState)%7Bs.onreadystatechange%3Dcallback%7Ddocument.body.appendChild(s)%3B%7D)()">
+        Click to Garfield (add this to your bookmarks)
+    </a>
+    <br>
+    <div>
+        <p>
+            The Garfield Extension for Firefox was written as a hackathon project for <a href="https://www.studenthack.com/">Studenthack VII</a>, written by myself, Salim, Ivan and Adrien. It won the award for best in theme (the theme was Cartoons) and hilariously said "I like to play ping pong with my ding dong" twice during the presentation in front of ~100 people.
+        </p>
+        <p>
+            Now I have made it available as a bookmarklet for <strong>any browser</strong>, just drag it into your bookmarks bar and click on any website.
+        </p>
+        <p>
+            Thanks to <a href="https://www.spriters-resource.com/game_boy_advance/garfieldsearchforpooky/sheet/36730/">A.J. Nitro</a> for ripping the excellent Garfield sprites and Blambot for <a href="https://www.dafont.com/anime-ace-bb.font">this cool font</a>.
+        </p>
+    </div>
+    <br>
+    <img src="ourteam.jpg" style="max-width: 800px">
+</body>
+
+</html>

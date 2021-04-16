@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Friend's Birthdays</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<style>
+    body {
+        background-color: black;
+        color: greenyellow;
+    }
+    pre {
+        display: inline;
+    }
+</style>
+<div class="center">
+<a href="http://www.claris.com/products/apple/personalsharing/ads-reseller-redirect/pws-webintosh-sftw-drgdrp.html"><img class="center" src="../img/emailer1.gif" alt="Manage your e-mail like a god. Click here." width="450" height="50" border="2" align="BOTTOM"></a>
+</div>
+<a href="../home.html">Back to Home...</a>
+<h1>Vim tips and tricks</h1>
+<p>Vim is the best text editor out there, if you know how to use it! It has a steep learning curve, but if you can
+master it, then you will be very fast at editing text.</p>
+<h2>The basics</h2>
+<h3>How do I quit vim?</h3>
+<ul>
+    <li>To quit vim, type <pre>:q</pre> (q for quit) and press the return key</li>
+    <li>To save and quit, type <pre>:wq</pre> (w for write, q for quit) instead</li>
+    <li>To quit without saving, type <pre>:q!</pre></li>
+</ul>
+<h3>Entering insert mode</h3>
+I use these keys all the time!
+<ul>
+    <li><pre>i</pre> enters <strong>i</strong>nsert mode at the cursor</li>
+    <li><pre>I</pre> enters insert mode at the beginning of the line</li>
+    <li><pre>a</pre> enters insert mode at the character after (a for after) the cursor</li>
+    <li><pre>A</pre> enters insert mode at the end of the line (A for after the line)</li>
+    <li><pre>o</pre> adds a new line under (o for open line) the current line and enters insert mode</li>
+    <li><pre>O</pre> adds a new line above the current line and enters insert mode</li>
+</ul>
+<h3>Text objects</h3>
+<p>A feature of vim that is very powerful is that it allows you to be quite specific about what you select with very
+few keypresses. These all work with <pre>d, x, y, c, v</pre> and others - the examples will use y (for yank (copy))</p>
+<ul>
+    <li><pre>yaw</pre> - yank a word - yanks a word and the space after it</li>
+    <li><pre>yiw</pre> - yank in word - yanks a word without the space</li>
+    <li><pre>ye</pre> - yanks to the end of the word</li>
+    <li><pre>yb</pre> - yanks from the beginning of the current word</li>
+</ul>
+</body>
+</html>

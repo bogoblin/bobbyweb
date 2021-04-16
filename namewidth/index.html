@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How Much is Your Name?</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+</style>
+<body>
+    <h1>How much is your name?</h1>
+    <input type="text" id="nameinput">
+    <button onclick=calculate()>Please give me the answer</button><br><br>
+    <span id="nameoutput" style="font-size:2em"></span>
+
+    <script>
+        const inputel = document.getElementById('nameinput');
+        function calculate() {
+            let outputel= document.getElementById('nameoutput');
+            const name = inputel.value;
+            outputel.innerHTML = name;
+            requestAnimationFrame(() => {
+                let outputel= document.getElementById('nameoutput');
+                const width = outputel.getBoundingClientRect().width / (30.2/1.5); // constant recieved from W index
+                outputel.innerHTML = name + " is " + width.toFixed(1).toString() + " much!";
+            });
+        }
+    </script>
+</body>
+</html>

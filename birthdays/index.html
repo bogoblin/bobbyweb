@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Friend's Birthdays</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body onload="t(b)" >
+<style>
+    body {
+        background-image: url("../img/birthdaybg.png");
+        background-repeat: repeat;
+    }
+</style>
+<div class="center">
+<a href="http://www.claris.com/products/apple/personalsharing/ads-reseller-redirect/pws-webintosh-sftw-drgdrp.html"><img class="center" src="../img/emailer1.gif" alt="Manage your e-mail like a god. Click here." width="450" height="50" border="2" align="BOTTOM"></a>
+</div>
+<a href="../home.html">Back to Home...</a>
+<div class="center">
+    <h1>Birthdays!</h1>
+    <p><img src="../img/starbttn.gif">If you want your birthday to appear on here, then please send me an email at bobby[at]bogoblin[dot].com<img src="../img/starbttn.gif"></p>
+</div>
+<script>
+p=' '
+j=(...u)=>u.join(p)
+G=Date
+k=G.parse
+h=s=>s.match(/\d+/)
+d=a=>{try{q=a.children[1].innerText
+y=h(q)[0]
+m=q.split(p)[1]
+o=new G()
+w=o.getFullYear()
+x=k(j(w,m,y))
+return x<o?k(j(w+1,m,y)):x}catch{return 0}}
+t=b=>{r=b.rows
+s=[p]
+for(i in r)h(i)?s.push(r[i]):p
+s.sort((a,b)=>d(a)-d(b))
+b.innerHTML=s.reduce((c,v)=>c+v.outerHTML)}
+// Can you golf this birthday sorting code down any further? Email me if you can improve on this!
+</script>
+<table id="b" width="60%" align="center" border="5px" bgcolor="#7fffd4">
+    <tr> <td width="50%"><strong>Person</strong></td> <td width="50%"><strong>Birthday</strong></td> </tr>
+    <tr> <td>Bobby McCann (me!)</td> <td>16th September</td> </tr>
+    <tr> <td>Andy from School</td> <td>11th October</td> </tr>
+    <tr> <td>Walter</td> <td>25th February</td> </tr>
+    <tr> <td>Kyle</td> <td>21st November</td> </tr>
+    <tr> <td>Roz</td> <td>23rd November</td> </tr>
+    <tr> <td>Tim</td> <td>10th March</td> </tr>
+    <tr> <td>TrogdorMan</td> <td>21st October</td> </tr>
+    <tr> <td>Funky Chris</td> <td>30th September</td> </tr>
+    <tr> <td>Snow</td> <td>30th February (LOL)</td> </tr>
+    <tr> <td>Stephen</td> <td>28th July</td> </tr>
+    <tr> <td>Cai</td> <td>15th July or perhaps September - both are on my calendar!</td> </tr>
+    <tr> <td>Haki</td> <td>8th February</td> </tr>
+    <tr> <td>Hollow</td> <td>13th August</td> </tr>
+    <tr> <td>Scott</td> <td>18th September</td> </tr>
+    <tr> <td>Alex</td> <td>10th October</td> </tr>
+    <tr> <td>Jav</td> <td>13th November</td> </tr>
+    <tr> <td>FlusteredCustard</td> <td>4th January</td> </tr>
+    <tr> <td>Kevin</td> <td>28th April</td> </tr>
+    <tr> <td>Mum</td> <td>2nd May</td> </tr>
+    <tr> <td>Emilee</td> <td>22nd January</td> </tr>
+    <tr> <td>Kevin's Girlfriend</td> <td>22nd January</td> </tr>
+</table>
+<div class="center">
+    <h2>Birthday Song! (By <em>The Beatles</em>)</h2>
+<p><em>
+    You say it's your birthday!<br>
+
+    It's my birthday too, yeah!<br>
+
+    You say it's your birthday!<br>
+
+    We're gonna have a good time!<br>
+
+    You say it's your birthday!<br>
+
+    Happy birthday to ya!<br>
+
+    Yes we're gonna have a party, party,<br>
+    Yes we're gonna have a party, party,<br>
+    Yes we're gonna have a party, party,<br>
+    Yes we're gonna have a party, party,<br>
+
+    (Birthday!)<br>
+    Would you like me to dance?<br>
+    (Birthday!)<br>
+    Take a ch-ch-ch-chance?<br>
+    (Birthday!)<br>
+    Would you like me to dance?<br>
+    (Birthday!)<br>
+    Take a ch-ch-ch-chance?<br>
+</em>
+</p>
+</div>
+</body>
+</html>

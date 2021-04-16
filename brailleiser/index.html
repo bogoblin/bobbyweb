@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Brailleiser - turn any image into braille!</title>
+    <script src="brailleiser.js"></script>
+<!--    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">-->
+</head>
+
+<style>
+    #body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #braille {
+        width: auto;
+        height: auto;
+        display: inline-block;
+    }
+    #body.inverted{
+        background-color: #333333;
+        color: #cccccc;
+    }
+    #body.normal{
+        background-color: #eeeeee;
+        color: #333333;
+    }
+    select {
+        padding: 10px;
+        border: 1px black;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2em;
+    }
+    button {
+        padding: 10px;
+        border: 1px black;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.2em;
+    }
+    #image-upload {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    #upload-label {
+        cursor: pointer;
+    }
+    #upload-label:focus {
+        outline: 1px dotted #000;
+        outline: -webkit-focus-ring-color auto 5px;
+    }
+    .panel {
+        overflow: hidden;
+        word-wrap: none;
+        white-space: nowrap;
+        line-height: 2em;
+        background-color: #666666;
+        color: #eeeeee;
+        padding: 10px;
+        margin: 20px;
+        height: 60px;
+        font-size: 1.2em;
+    }
+</style>
+
+<body id="body" class="normal">
+    <pre style="user-select: none">
+⠁⠁⢀⣠⣠⣠⣠⣀⡀⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⢠⣶⡦⠁⠁⠁⣠⣦⡀⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁
+⠁⠁⣸⣿⣿⣿⣿⣿⣿⣦⡀⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⣾⣾⡄⠁⠁⢸⣿⡿⠁⠁⠁⣺⣿⡯⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⢠⣾⣶⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁
+⠁⠁⣺⣿⡇⠁⠁⠈⠻⣿⣿⡀⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠈⠺⠻⠁⠁⠁⢸⣿⡿⠁⠁⠁⣺⣿⡯⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠈⠻⠋⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁
+⠁⠁⣺⣿⡇⠁⠁⠁⠁⣻⣿⡂⠁⠁⠁⣀⠁⠁⠁⣀⣠⣀⠁⠁⠁⠁⠁⠁⣀⣀⡀⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⢸⣿⡯⠁⠁⠁⣺⣿⡯⠁⠁⠁⠁⠁⠁⣀⣀⡀⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⣀⣠⣤⣾⣶⡀⠁⠁⠁⠁⠁⣀⣀⡀⠁⠁⠁⠁⠁⢀⡀⠁⠁⢀⣠⣠⡀⠁
+⠁⠁⣾⣿⡂⠁⠁⠁⣨⣿⣿⠊⠁⠁⢸⣿⣦⣸⣾⣿⣿⣿⡦⠁⠁⣠⣾⣿⣾⣿⣿⣿⣦⠁⠁⢸⣾⣿⠁⠁⠁⢸⣿⡯⠁⠁⠁⣺⣿⡏⠁⠁⠁⣠⣾⣿⣿⣿⣿⣿⣦⠁⠁⠁⢸⣿⡦⠁⠁⠁⣰⣾⣾⣿⣿⣿⣿⡎⠁⠁⢠⣺⣾⣿⣿⣿⣾⣮⡀⠁⠁⣺⣿⣢⣾⣿⣿⣿⣿⡂
+⠁⠁⣾⣿⣶⣦⣶⣾⣿⡿⠋⠁⠁⠁⢸⣿⣿⡿⠋⠉⢸⣿⡯⠁⣨⣿⣿⠋⠈⠈⢸⣿⡯⠁⠁⢸⣿⣿⠁⠁⠁⢸⣿⡯⠁⠁⠁⣺⣿⡏⠁⠁⣸⣿⡿⠋⠈⠈⣨⣿⣿⠂⠁⠁⣸⣿⡇⠁⠁⣸⣿⡿⠋⠉⠁⠸⠻⠋⠁⢠⣾⣿⠋⠈⠈⢈⣹⣿⡆⠁⠁⣻⣿⣿⠿⠋⠈⣻⣿⡂
+⠁⠁⣿⣿⡿⠿⣿⣿⣿⣿⣶⡀⠁⠁⢸⣿⡿⠁⠁⠁⠈⠛⠁⢠⣾⣿⠃⠁⠁⠁⢸⣿⡧⠁⠁⢸⣿⡿⠁⠁⠁⢸⣿⡯⠁⠁⠁⣺⣿⡋⠁⠁⣾⣿⠁⣠⣤⣾⣿⡿⠋⠁⠁⠁⣺⣿⡇⠁⠁⢺⣿⣿⣶⣦⣤⡀⠁⠁⠁⣺⣿⡋⣠⣠⣾⣿⣿⠟⠁⠁⠁⣿⣿⡋⠁⠁⠁⠙⠋⠁
+⠁⠨⣿⣿⠁⠁⠁⠈⠈⠻⣿⣿⡆⠁⢸⣿⡯⠁⠁⠁⠁⠁⠁⢸⣿⣿⠁⠁⠁⠁⢸⣿⡇⠁⠁⢸⣿⡯⠁⠁⠁⣺⣿⡯⠁⠁⠁⣺⣿⡋⠁⠸⣿⣿⣾⣿⡿⠛⠉⠁⠁⠁⠁⠁⣾⣿⡂⠁⠁⠈⠈⠻⠻⠿⣿⣿⣦⠁⠁⣺⣿⣾⣿⡿⠿⠋⠁⠁⠁⠁⠁⣻⣿⡂⠁⠁⠁⠁⠁⠁
+⠁⠨⣿⣿⠁⠁⠁⠁⣠⣺⣿⡿⠂⠁⢸⣿⡯⠁⠁⠁⠁⠁⠁⠸⣿⣿⡀⠁⠁⠁⢸⣿⣧⠁⠁⢸⣿⡯⠁⠁⠁⣺⣿⡯⠁⠁⠁⣿⣿⡋⠁⠈⣿⣿⡋⠈⠁⠁⠁⠁⣠⣦⠁⠁⣺⣿⡆⠁⠁⣀⡀⠁⠁⠁⠨⣿⣿⡂⠁⢻⣿⣿⠈⠈⠁⠁⠁⣠⣤⡀⠁⣿⣿⡂⠁⠁⠁⠁⠁⠁
+⠁⠨⣿⣿⣾⣾⣾⣿⣿⡿⠻⠉⠁⠁⢸⣿⡯⠁⠁⠁⠁⠁⠁⠁⢻⣿⣾⣦⣤⣾⣾⣿⣿⡂⠁⢸⣿⡿⠁⠁⠁⣺⣿⡏⠁⠁⠠⣿⣿⡊⠁⠁⠸⣿⣿⣾⣦⣶⣾⣾⣿⡿⠁⠁⣺⣿⡆⠁⢸⣿⣾⣶⣦⣶⣾⣿⡿⠂⠁⠈⢻⣿⣾⣶⣦⣶⣾⣿⡿⠋⠁⣻⣿⡂⠁⠁⠁⠁⠁⠁
+⠁⠈⠻⠻⠻⠻⠻⠋⠈⠈⠁⠁⠁⠁⠸⠻⠋⠁⠁⠁⠁⠁⠁⠁⠈⠙⠻⠻⠻⠻⠋⠻⠿⠋⠁⠈⠈⠋⠁⠁⠁⠸⠻⠋⠁⠁⠁⠻⠻⠁⠁⠁⠁⠈⠈⠻⠻⠻⠻⠋⠈⠁⠁⠁⠈⠋⠁⠁⠈⠙⠻⠻⠻⠻⠻⠋⠁⠁⠁⠁⠁⠈⠻⠻⠻⠻⠻⠋⠁⠁⠁⠻⠻⠂⠁⠁⠁⠁⠁⠁
+⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁⠁
+    </pre>
+    <div id="controls">
+        <input type="file" id="image-upload">
+        <label for="image-upload" id="upload-label" class="panel"><i class="far fa-file-upload"></i> Upload an image...</label>
+
+        <span id="width-panel" class="panel">
+            <input type="range" min="10" max="200" value="60" class="slider" id="image-width" style="width:190px;">
+            Image width: <span id="image-width-text"></span> characters <span id="character-total"></span>
+        </span>
+    </div>
+    <br>
+    <div>
+        <span id="method-panel" class="panel">
+                Method:
+                <select id="method">
+                    <option value="Cluster">Cluster</option>
+                    <option value="Luma">Luma</option>
+                    <option value="Average">Average</option>
+                    <option value="Minimum">Minimum</option>
+                    <option value="Maximum">Maximum</option>
+                    <option value="Red">Red</option>
+                    <option value="Green">Green</option>
+                    <option value="Blue">Blue</option>
+                </select>
+            </span>
+        
+            <span class="panel">
+                <input type="checkbox" id="invert" onchange="updateInvert()"> Invert Colours
+            </span>
+    </div>
+    <br>
+    <div>
+        <span><button id="convert-button" onclick="displayBraille()" disabled ><i class="fas fa-braille"></i> Convert</button>
+    </div>
+    <div>
+        Try using cluster multiple times - its random nature means that you will get different results.
+    </div>
+    
+    <pre id="braille"></pre>
+    <img id="preview-image" hidden>
+    <canvas id="canvas" width=100 height=100 hidden></canvas>
+    <script>
+        let invert = false;
+        function updateInvert() {
+            console.log("hell")
+            invert = document.getElementById("invert").checked;
+            if (invert) {
+                document.getElementById("body").className = "inverted";
+            } else {
+                document.getElementById("body").className = "normal";
+            }
+        }
+
+        function updateCharacterCount() {
+            outputWidth = document.getElementById("image-width").value*2;
+            document.getElementById("image-width-text").innerHTML = ((outputWidth/2<100)?"<span style='color:#666666'>0</span>":"")+(outputWidth/2).toString();
+            const img = document.getElementById('preview-image');
+            let outputHeight = heightScaleFactor*outputWidth*img.height/img.width;
+            outputHeight -= outputHeight%4;
+            let characterTotal = Math.floor((outputHeight/4) * (outputWidth/2 + 1));
+            if (!isNaN(characterTotal)) {
+                document.getElementById("character-total").innerHTML = "("+characterTotal<10?" ":""+characterTotal<100?" ":""
+                +characterTotal.toString()+" characters total)";
+            } else {
+                document.getElementById("character-total").innerHTML = "";
+            }
+            
+        }
+
+        let outputWidth = 100;
+        let heightScaleFactor = 142/116;
+        document.getElementById("image-width").oninput = updateCharacterCount;
+        updateCharacterCount();
+        const convertButton = document.getElementById("convert-button");
+
+        document.getElementById("image-upload").onchange = function () {
+            if (this.files[0].type.includes("image")) {
+                convertButton.disabled = true;
+                convertButton.innerHTML = "One moment...";
+                let reader = new FileReader();
+                reader.readAsDataURL(document.getElementById("image-upload").files[0]);
+                reader.onloadend = () => {
+                    document.getElementById('preview-image').src = reader.result;
+                    convertButton.disabled = false;
+                    convertButton.innerHTML = "Convert";
+                    updateCharacterCount();
+                }
+            }
+        }
+
+        const outputElement = document.getElementById("braille");
+
+        function displayBraille() {
+            const result = createBraille(outputWidth);
+            outputElement.innerHTML = result.data;
+            console.log(result.data.length);
+        }
+    </script>
+</body>
