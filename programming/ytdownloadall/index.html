@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="../../js/embed-github-code.js"></script>
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-dark.css">
 </head>
 <body>
 <h1>I want to download every YouTube video I watch</h1>
@@ -30,26 +35,10 @@ this POST request so that I don't have to use postman.</p>
 <img src="img/testform.png">
 <p>This form simply submits a form with the 'url' field containing what is in the text box. Here's the server
 code:</p>
-<pre lang="python">
-from flask import Flask, request, render_template, redirect
-
-app = Flask(__name__)
-
-
-@app.route('/')
-def home():
-    return render_template('form.html')
-
-
-@app.route('/download', methods=['POST'])
-def download():
-    print(request.form['url'])
-    return redirect('/')
-
-
-if __name__ == '__main__':
-    app.run()
-</pre>
+<a class="github-code"
+   href="https://github.com/bogoblin/YTDLserver/blob/725605b04753587694fd37d00b8cbb053fab5cfd/app.py#L1-L18">
+    Click to view code on Github
+</a>
 <p>Simple! Now time to download the videos. After importing youtube_dl, it is very simple to use, and our
 download route now looks like this:</p>
 <pre>

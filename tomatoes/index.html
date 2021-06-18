@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>Nick Huber on Twitter</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: x-large;
+
+            margin: 20px;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        #display-name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #handle {
+            color: grey;
+        }
+
+        #info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <img src="pfp.png" width="142" height="138">
+    <div id="info">
+        <div id="display-name">Nick Huber</div>
+        <div id="handle">@sweatystartup</div>
+    </div>
+</div>
+
+<div id="tweet">
+    <p>You don't understand scale.</p>
+    <p>Use $50 to buy 10 tomato plants.</p>
+    <p>In 6 months you have 250 tomatoes.</p>
+</div>
+
+<script>
+    const interval = 1000;
+    const tweet = document.getElementById('tweet');
+    let tomatoes = 250n;
+    let phase = 0;
+    setInterval(() => {
+        let newLine;
+        switch (phase) {
+            case 0:
+                newLine = `Plant those into ${tomatoes} plants.`;
+                tomatoes *= 25n;
+                phase = 1;
+                break;
+                case 1:
+                    newLine = `6 months you have ${tomatoes} tomatoes.`;
+                    phase = 0;
+                    break;
+
+
+        }
+
+        const el1 = document.createElement('p');
+        el1.innerText = newLine;
+
+        index.append(el1);
+        window.scrollTo(0,document.body.scrollHeight);
+    }, interval);
+</script>
+</body>
+</html>
