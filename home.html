@@ -10,46 +10,62 @@
         background-image: url("img/greybg.png");
         background-repeat: repeat;
     }
-    div {
+    .grid > div {
         background-color: lawngreen;
+        padding: 5px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4px;
     }
 </style>
 <body>
 <div class="center">
-    <h1>Welcome to Bobby's Web Empire!</h1>
+    <img src="img/header.png" width="100%">
 </div>
-<div>
-    <h2>The Emperor: Bobby McCann!</h2>
-    <img src="img/cowbobby.png" height="250">
-    <img src="img/bobbyisready.png" height="250">
-    <img src="img/checkem.png" height="250">
-</div>
-<div>
-    <h2>What's On The Site?</h2>
-    <ul>
-        <li><a href="rush">Rush Forever (Rush Fan-page)<img src="img/new.gif"></a><br> - Updated 16th April - Presto review!</li>
-        <li><a href="birthdays">Birthdays of my friends!</a><br></li>
-        <li><a href="vim">Vim Tips and Tricks!</a></li>
-        <li><a href="RLM">RedLetterMedia funny pics</a></li>
-        <li><a href="garfield">Garfield Extension (for all modern browsers)</a></li>
-        <li><a href="brailleiser">Turn any image into braille! (For discord servers, twitch chat, etc)</a></li>
-        <li><a href="namewidth">How much is your name? (I don't remember why I made this)</a></li>
-    </ul>
-</div>
-<div>
-    <h2>Programming blogs</h2>
-    <ul>
-        <li><a href="programming/ytdownloadall">I want to download every YouTube video I watch</a></li>
-    </ul>
-</div>
-<div>
-    <h2>My Friends Online</h2>
-    <ul>
-        <li><a href="https://walt.pw">Walter (a good friend of mine with a funny twitch channel)</a></li>
-        <li><a href="https://herbalbee.art">Emilee's Art Website - Friend and collaborator!</a></li>
-        <li><a href="https://twitch.tv/officialpopefrancis">Tim's Twitch Channel (funny film man)</a></li>
-        <li><a href="https://twitch.tv/wungusdaspungus">WungusDasPungus (AKA Leem)'s twitch channel (hilarious gaming)</a></li>
-    </ul>
+<div class="grid">
+<!--    <div>-->
+<!--        <h2>The Emperor: Bobby McCann!</h2>-->
+<!--        <img src="img/cowbobby.png" width="100%" alt="Bobby wearing cowboy hat">-->
+<!--&lt;!&ndash;        <img src="img/bobbyisready.png" width="100%" alt="My Bobby is ready">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="img/checkem.png" width="100%" alt="Funny drawing of a face">&ndash;&gt;-->
+<!--    </div>-->
+    <div>
+        <h2>Games and Toys I've Made</h2>
+        <ul>
+            <li><a href="https://sailing.netlify.app/">Sailing simulator (requires gamepad)</a></li>
+            <li><a href="https://bogoblin.itch.io/a-very-able-cable">A Very Able Cable (Global Game Jam 2021)</a></li>
+            <li><a href="https://bogoblin.itch.io/student-debt-pinball">Student Debt Pinball (Manchester Student Game Jam)</a></li>
+            <li><a href="garfield">Garfield Extension (for all modern browsers)</a></li>
+            <li><a href="brailleiser">Turn any image into braille! (For discord servers, twitch chat, etc)</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Misc Bits</h2>
+        <ul>
+            <li><a href="rush">Rush Forever (Rush Fan-page)<img src="img/new.gif"></a><br> - Updated 16th April - Presto review!</li>
+            <li><a href="birthdays">Birthdays of my friends!</a><br></li>
+<!--            <li><a href="vim">Vim Tips and Tricks!</a></li>-->
+<!--            <li><a href="RLM">RedLetterMedia funny pics</a></li>-->
+            <li><a href="namewidth">How much is your name? (I don't remember why I made this)</a></li>
+        </ul>
+    </div>
+<!--    <div>-->
+<!--        <h2>Programming blogs</h2>-->
+<!--        <ul>-->
+<!--            <li><a href="programming/ytdownloadall">I want to download every YouTube video I watch</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+    <div>
+        <h2>My Friends Online</h2>
+        <ul>
+            <li><a href="https://walt.pw">Walter (a good friend of mine with a funny twitch channel)</a></li>
+            <li><a href="https://herbalbee.art">Emilee's Art Website - Friend and collaborator!</a></li>
+            <li><a href="https://twitch.tv/officialpopefrancis">Tim's Twitch Channel (funny film man)</a></li>
+            <li><a href="https://twitch.tv/wungusdaspungus">WungusDasPungus (AKA Leem)'s twitch channel (hilarious gaming)</a></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
