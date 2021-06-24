@@ -1,6 +1,9 @@
+/*@font-face {*/
+/*    font-family: Oliciy;*/
+/*    src: url("./Oliciy.woff");*/
+/*}*/
 body {
-    margin: 0;
-    padding: 0;
+    font-family: Oliciy, sans-serif;
 }
 .center * {
     text-align: center;

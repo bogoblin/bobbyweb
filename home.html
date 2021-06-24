@@ -6,70 +6,134 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <style>
+    :root {
+        --left-margin: calc(100% * 58/1600);
+    }
     body {
         background-image: url("img/colourbg.png");
         background-repeat: repeat;
         margin: 0;
         padding: 0;
     }
-    .grid div {
-        background-color: lawngreen;
-        padding: 5px;
+    img.header {
+        width: 100%;
+        border-bottom: 5px black solid;
     }
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 4px;
-        margin: 4px;
+    h1,h2,h3,h4,h5,h6 {
+        display: inline-block;
+        margin: 0 0 0 calc(var(--left-margin) - 10px);
+        padding: 5px 10px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
     }
+    ul {
+        padding: 0 var(--left-margin) ;
+    }
+    ul.scroll-section{
+        display: flex;
+        overflow-x: scroll;
+        gap: 10px;
+    }
+    li {
+        background-color: rgba(0,0,0,0.8);
+        padding: 10px;
+        color: white;
+    }
+    a {
+        color: #45ffe6;
+    }
+    li {
+        list-style-type: none;
+        margin: 0;
+    }
+    .scroll-section a {
+        text-decoration: none;
+    }
+    .scroll-section figure {
+        min-height: 200px;
+        /*background-color: rgba(0,0,0,0.8);*/
+        margin: 0;
+    }
+    .scroll-section figure img {
+        height: 200px;
+    }
+    .scroll-section figure figcaption {
+        font-family: Oliciy, sans-serif;
+        color: white;
+    }
+
 </style>
 <body>
-<div class="center">
-    <img src="img/header.png" width="100%" style="margin: 0; padding: 0; border-bottom: 5px solid black">
+<img src="img/header.png" class="header" alt="bogoblin.com - home of Bobby McCann">
+<div class="content">
+    <!--    <div>-->
+    <!--        <h2>The Emperor: Bobby McCann!</h2>-->
+    <!--        <img src="img/cowbobby.png" width="100%" alt="Bobby wearing cowboy hat">-->
+    <!--&lt;!&ndash;        <img src="img/bobbyisready.png" width="100%" alt="My Bobby is ready">&ndash;&gt;-->
+    <!--&lt;!&ndash;        <img src="img/checkem.png" width="100%" alt="Funny drawing of a face">&ndash;&gt;-->
+    <!--    </div>-->
+    <section>
+        <header>
+            <h2>Games and Stuff</h2>
+        </header>
+        <ul class="scroll-section">
+            <li>
+                <a href="https://sailing.netlify.app/">
+                    <figure>
+                        <picture><img src="img/easylaser.png" alt="Picture of EasyLaser in action"></picture>
+                        <figcaption>EasyLaser - Sailing simulator (requires gamepad)</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://bogoblin.itch.io/a-very-able-cable">
+                    <figure>
+                        <picture><img src="img/avac.png" alt="A Very Able Cable screenshot"></picture>
+                        <figcaption>A Very Able Cable (Global Game Jam 2021)</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://bogoblin.itch.io/student-debt-pinball">
+                    <figure>
+                        <picture><img src="img/studentdebtpinball.png" alt="Student Debt Pinball screenshot"></picture>
+                        <figcaption>Student Debt Pinball (Manchester Student Game Jam)</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="garfield">
+                    <figure>
+                        <picture><img src="garfield/screen1.png" alt="Garfield messing up the browser window"></picture>
+                        <figcaption>Garfield Extension (for all modern browsers)</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <!--        <li><a href="brailleiser">Turn any image into braille! (For discord servers, twitch chat, etc)</a></li>-->
+        </ul>
+    </section>
+    <h2>Misc Bits</h2>
+    <ul>
+        <li><a href="rush">Rush Forever (Rush Fan-page)<img src="img/new.gif"></a><br> - Updated 16th April - Presto review!</li>
+        <li><a href="birthdays">Birthdays of my friends!</a><br></li>
+        <!--            <li><a href="vim">Vim Tips and Tricks!</a></li>-->
+        <!--            <li><a href="RLM">RedLetterMedia funny pics</a></li>-->
+        <li><a href="namewidth">How much is your name? (I don't remember why I made this)</a></li>
+        <li><a href="tomatoes">How to grow your business (twitter joke)</a></li>
+    </ul>
+    <!--        <h2>Programming blogs</h2>-->
+    <!--        <ul>-->
+    <!--            <li><a href="programming/ytdownloadall">I want to download every YouTube video I watch</a></li>-->
+    <!--        </ul>-->
+    <h2>My Friends Online</h2>
+    <ul>
+        <li><a href="https://walt.pw">Walter (a good friend of mine with a funny twitch channel)</a></li>
+        <li><a href="https://herbalbee.art">Emilee's Art Website - Friend and collaborator!</a></li>
+        <li><a href="https://twitch.tv/officialpopefrancis">Tim's Twitch Channel (funny film man)</a></li>
+        <li><a href="https://twitch.tv/wungusdaspungus">WungusDasPungus (AKA Leem)'s twitch channel (hilarious gaming)</a></li>
+    </ul>
 </div>
-<div class="grid">
-<!--    <div>-->
-<!--        <h2>The Emperor: Bobby McCann!</h2>-->
-<!--        <img src="img/cowbobby.png" width="100%" alt="Bobby wearing cowboy hat">-->
-<!--&lt;!&ndash;        <img src="img/bobbyisready.png" width="100%" alt="My Bobby is ready">&ndash;&gt;-->
-<!--&lt;!&ndash;        <img src="img/checkem.png" width="100%" alt="Funny drawing of a face">&ndash;&gt;-->
-<!--    </div>-->
-    <div>
-        <h2>Games and Toys I've Made</h2>
-        <ul>
-            <li><a href="https://sailing.netlify.app/">Sailing simulator (requires gamepad)</a></li>
-            <li><a href="https://bogoblin.itch.io/a-very-able-cable">A Very Able Cable (Global Game Jam 2021)</a></li>
-            <li><a href="https://bogoblin.itch.io/student-debt-pinball">Student Debt Pinball (Manchester Student Game Jam)</a></li>
-            <li><a href="garfield">Garfield Extension (for all modern browsers)</a></li>
-            <li><a href="brailleiser">Turn any image into braille! (For discord servers, twitch chat, etc)</a></li>
-        </ul>
-    </div>
-    <div>
-        <h2>Misc Bits</h2>
-        <ul>
-            <li><a href="rush">Rush Forever (Rush Fan-page)<img src="img/new.gif"></a><br> - Updated 16th April - Presto review!</li>
-            <li><a href="birthdays">Birthdays of my friends!</a><br></li>
-<!--            <li><a href="vim">Vim Tips and Tricks!</a></li>-->
-<!--            <li><a href="RLM">RedLetterMedia funny pics</a></li>-->
-            <li><a href="namewidth">How much is your name? (I don't remember why I made this)</a></li>
-            <li><a href="tomatoes">How to grow your business (twitter joke)</a></li>
-        </ul>
-    </div>
-<!--    <div>-->
-<!--        <h2>Programming blogs</h2>-->
-<!--        <ul>-->
-<!--            <li><a href="programming/ytdownloadall">I want to download every YouTube video I watch</a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-    <div>
-        <h2>My Friends Online</h2>
-        <ul>
-            <li><a href="https://walt.pw">Walter (a good friend of mine with a funny twitch channel)</a></li>
-            <li><a href="https://herbalbee.art">Emilee's Art Website - Friend and collaborator!</a></li>
-            <li><a href="https://twitch.tv/officialpopefrancis">Tim's Twitch Channel (funny film man)</a></li>
-            <li><a href="https://twitch.tv/wungusdaspungus">WungusDasPungus (AKA Leem)'s twitch channel (hilarious gaming)</a></li>
-        </ul>
-    </div>
 </div>
 </body>
 </html>
