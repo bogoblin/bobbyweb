@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="home">
+    {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+    {% for category in site.categories %}
+    <section>
+        <header>
+            <h2 class="bar-title">{{category[0]}}</h2>
+        </header>
+        <ul class="scroll-section">
+            {% for post in category[1] %}
+            <li>
+                {% if post.redirect %}
+                <a href='{{ post.redirect }}'>
+                    {% else %}
+                    <a href='{{ post.url }}'>
+                        {% endif %}
+                        <figure>
+                            <picture><img src="{{post.image}}" alt=""></picture>
+                            <figcaption>{{post.title}}</figcaption>
+                        </figure>
+                    </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endfor %}
+
+    <h2 class="bar-title">Misc Bits</h2>
+    <ul>
+        <li><a href="rush">Rush Forever (Rush Fan-page)<img src="img/new.gif"></a><br> - Updated 16th April - Presto review!</li>
+        <li><a href="birthdays">Birthdays of my friends!</a><br></li>
+        <!--            <li><a href="vim">Vim Tips and Tricks!</a></li>-->
+        <!--            <li><a href="RLM">RedLetterMedia funny pics</a></li>-->
+        <li><a href="namewidth">How much is your name? (I don't remember why I made this)</a></li>
+        <li><a href="tomatoes">How to grow your business (twitter joke)</a></li>
+    </ul>
+    <!--        <h2>Programming blogs</h2>-->
+    <!--        <ul>-->
+    <!--            <li><a href="programming/ytdownloadall">I want to download every YouTube video I watch</a></li>-->
+    <!--        </ul>-->
+    <h2 class="bar-title">My Friends Online</h2>
+    <ul>
+        <li><a href="https://walt.pw">Walter (a good friend of mine with a funny twitch channel)</a></li>
+        <li><a href="https://herbalbee.art">Emilee's Art Website - Friend and collaborator!</a></li>
+        <li><a href="https://twitch.tv/officialpopefrancis">Tim's Twitch Channel (funny film man)</a></li>
+        <li><a href="https://twitch.tv/wungusdaspungus">WungusDasPungus (AKA Leem)'s twitch channel (hilarious gaming)</a></li>
+    </ul>
+</div>
