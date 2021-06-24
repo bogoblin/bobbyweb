@@ -7,10 +7,12 @@
 </head>
 <style>
     body {
-        background-image: url("img/greybg.png");
+        background-image: url("img/colourbg.png");
         background-repeat: repeat;
+        margin: 0;
+        padding: 0;
     }
-    .grid > div {
+    .grid div {
         background-color: lawngreen;
         padding: 5px;
     }
@@ -18,11 +20,12 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 4px;
+        margin: 4px;
     }
 </style>
 <body>
 <div class="center">
-    <img src="img/header.png" width="100%">
+    <img src="img/header.png" width="100%" style="margin: 0; padding: 0; border-bottom: 5px solid black">
 </div>
 <div class="grid">
 <!--    <div>-->
