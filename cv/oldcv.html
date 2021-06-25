@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev"
+        crossorigin="anonymous">
+
+    <!-- <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script> -->
+    <title>Bobby W. McCann CV</title>
+</head>
+<style>
+    body {
+        font-family: 'Rubik', sans-serif;
+        padding: 0;
+        margin: 20px;
+        font-size: 13pt;
+    }
+
+
+
+    div.header {
+        text-align: left;
+        width: auto;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    div.info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    div.info > span {
+        margin-left: 4pt;
+        margin-right: 20pt;
+    }
+    #myhead {
+        height: 160px;
+    }
+
+    div.section {
+        break-inside: avoid;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 4em;
+        margin: 0;
+        display: block;
+    }
+
+    h2 {
+        background: black;
+        color: white;
+        display: inline-block;
+        /*margin: 0 auto;*/
+        padding: 2px 4px 0px 8px;
+        /*background-image: repeating-linear-gradient(-45deg, #ffffff 0px, #ffffff 1px, black 1px, black 10px);*/
+        box-shadow: 5px 5px 0 black;
+        text-shadow: 2px -2px 0px black;
+        /* outline: 1px solid black; */
+        font-size: 1.2em;
+        border-radius: 2px;
+        border: 1px solid black;
+    }
+    p, h3 {
+        margin-block-start: 8pt;
+        margin-block-end: 8pt;
+    }
+
+    ul {
+        padding-left: 20pt;
+    }
+
+    span.degree {
+        font-style: italic;
+        text-align: right;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    div.column-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10pt;
+    }
+    div.column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    @page {
+        margin-top: 8mm;
+        margin-bottom: 8mm;
+    }
+
+    @media print {
+        body {
+            font-size: 11pt;
+            margin: 0;
+
+
+        }
+        h2 {
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+            color: white !important;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        #myhead {
+            width: 0%;
+            height: 0%;
+        }
+        div.header {
+            grid-template-columns: 0 1fr;
+            grid-gap: 0;
+        }
+    }
+</style>
+<body>
+    <div class="header">
+        <!-- <img src="myhead.jpg" id="myhead"> -->
+        <div>
+            <h1>Bobby W. McCann</h1>
+            <div class="info">
+                <span><i class="fas fa-envelope-open"></i>   bobby@bogoblin.com</span>
+                <span><i class="fas fa-phone"></i>  +44 7583 192 473</span>
+                <span><a href="https://www.linkedin.com/in/robmccann95/"><i class="fab fa-linkedin"></i>  robmccann95</a></span>
+            </div>
+        </div>
+    </div>
+
+<div class="column-container">
+<div class="column">
+
+<div class="section">
+<h2>Work Experience - COMPjudge</h2>
+<p>Designed and created an automated marking system as a paid summer project for the University of Manchester's second year algorithms course. The project was completed on time and is currently in use, with plans to use the system for other courses in the school. I developed skill with a wide range of technologies, including:</p>
+<ul>
+    <li><strong>Frontend</strong> - HTML, Bootstrap, Javascript, JQuery</li>
+    <li><strong>Backend</strong> - Node.js, MongoDB, Python, C</li>
+    <li><strong>Server</strong> - Apache, LetsEncrypt, Bash</li>
+</ul>
+<p>I continued supporting the project over my final year of university, leading to the Symbolic AI course using the system in the second semester. Another student is working on it over this summer so that the tool can grow and become more useful.</p>
+</div>
+
+
+<div class="section">
+    <h2>Hackathons</h2>
+    <h3>Studenthack VII - Garfield Extension for Firefox</h3>
+    <p>Created a Firefox extension that summons Garfield to mess up your web page. Try it out at <a href="https://bogoblin.com/garfield">bogoblin.com/garfield</a>. Won best in theme.
+    </p>
+    <h3>ManMetHacks 1.0 - Mouse in the House</h3>
+    <p>Designed and implemented a tile based platform engine in Javascript. I wrote the engine and created art for the game in <strong>Photoshop</strong>. Won most entertaining hack. Play at <a href="http://mouseinthe.house">mouseinthe.house</a></p>
+
+    <h3>Manchester Student Game Jam - Student Debt Pinball</h3>
+    <p>Inspired by Space Cadet 3D Pinball for Windows, I created a pinball game in Unity for this 12 hour game jam with the theme of "crushing student debt". Play it here: <a href="https://bogoblin.itch.io/student-debt-pinball">bogoblin.itch.io/student-debt-pinball</a></p>
+
+    <h3>OxfordHack 2019 - Rindr for Teddit</h3>
+    <p>Used the Microsoft Azure API with Node.js, MongoDB, and the reddit API create a tinder-style app which matches reddit users with one another based on their post history.</p>
+    </div>
+
+</div>
+<div class="column">
+
+<div class="section">
+    <h2>Education</h2>
+    <h3>The University of Manchester - BSc Computer Science - 1st Class Degree, 2019</h3>
+<ul>
+    <li>Used <strong>Git</strong>, <strong>JUnit</strong> and <strong>Jenkins</strong> with <strong>Java</strong>'s spring framework to create and test a website for creating and joining events. I was project manager for our group.</li>
+    <li>Wrote code in <strong>C</strong> to implement algorithms and data structures, and create interactive 3D applications with <strong>OpenGL</strong>.</li>
+    <li>Implemented machine learning and computer vision algorithms in <strong>Matlab</strong>.</li>
+    <li>Learned <strong>Oracle PL / SQL</strong> and how to design relational databases.</li>
+    <li>Took courses in User Experience, Cryptography and Network Security, Natural Language Processing, Computer Vision, Internet of Things, and more.</li>
+    </ul>
+    <h3>Christ the King High School and Sixth Form</h3>
+    <ul>
+        <li>A Levels - Mathematics, Further Mathematics, Computing, Physics (AS)</li>
+        <li>13 GCSEs A* to B, including A*s in Maths and Physics, and As in English and IT</li>
+    </ul>
+</div>
+
+
+<div class="section">
+<h2>Final Year Project</h2>
+<p>Designed and built a 3D sailing simulator for teaching people how to sail. It is built in the <Strong>Unity</Strong> engine and written in <Strong>C#</Strong>, with 3D models created in <strong>Blender</strong>.
+Try it out at <a href="https://sailing.netlify.com">sailing.netlify.com</a></p>
+</div>
+
+<div class="section">
+<h2>ACM ICPC</h2>
+<p>Our team placed <strong>9th</strong> in the UKIEPC, the UK & Ireland subregional contest for the ACM ICPC (International Collegiate Programming Contest). We qualified for and competed in the North West Europe regionals. I learned <strong>C++</strong> and studied algorithms and data structures to prepare for this.</p>
+</div>
+
+<div class="section">
+<h2>Staff Student Contest</h2>
+<p>Organised the staff vs student programming contests for 2018 and 2019. This involved coming up with ICPC style problems, hosting and managing the judging server, typesetting with <strong>LaTeX</strong>, designing posters and working with a team.</p>
+</div>
+
+<!-- <div class="section">
+<h2>I teach Python!</h2>
+<p>I volunteer once a week to teach a free Python course for the University, run by our Computer Science society UNICS. I love teaching and aspire to be an educator in the future.</p>
+</div> -->
+
+<!-- <div class="section">
+<h2>Web Technologies</h2>
+<p>Very interested in web assembly and what that means for the future of the web, and am learning rust in order to take advantage of this phenomenon. Knowledgable in CSS grid and flexbox from completing both of Dave Geddes mastery games.</p>
+</div> -->
+
+<!-- <div class="section">
+<h2>Other Skills</h2>
+<ul>
+    <li><strong>HTML and CSS</strong> skills, including knowledge of CSS flexbox and grid, thanks to having completed <a href="https://mastery.games/">Dave Geddes mastery games.</a></li>
+    <li>Learning the <strong>React</strong> framework, having completed the codecademy courses, and created a minesweeper game in the framework.</li>
+</ul>
+</div> -->
+
+    </div>
+
+</div>
+</body>
+</html>
