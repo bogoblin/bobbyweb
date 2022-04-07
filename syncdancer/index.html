@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SyncDancer</title>
+</head>
+<style>
+    #help {
+        z-index: 100;
+        font-family: monospace;
+        font-size: 2em;
+        max-width: 70%;
+    }
+</style>
+<body style="margin: 0; height: 100%; width: 100%; overflow: hidden">
+<script src="./VideoTime.js"></script>
+<script src="./Tapper.js"></script>
+<script src="./DanceCanvas.js"></script>
+<script src="./libgif.js"></script>
+<script>
+    const gifs = {
+        "duck": {
+            url: './Loop%20Videos/duck_32.gif',
+            offset: 11,
+            beats: 32,
+        },
+        "triangle": {
+            url: './Loop%20Videos/triangle_4.gif',
+            offset: 0,
+            beats: 4,
+        }
+    };
+</script>
+<dialog id="help" open>
+    <h1>How to use SyncDancer</h1>
+    <ul>
+        <li>Press Space in time with the song to sync the dancers</li>
+        <li>Press W or S to double or half the speed</li>
+        <li>Press the number keys to change modes</li>
+        <li>Arrow Keys change the size of the tiles</li>
+        <li>Press H to show or hide this help box</li>
+    </ul>
+    <p>The images can take a few moments to load - be patient!</p>
+    <p>Enjoy!</p>
+</dialog>
+<script>
+    let videos = [];
+    const dance = new DanceCanvas();
+
+    for (let gifName in gifs) {
+        const g = gifs[gifName];
+        const element = document.createElement('img');
+        document.body.append(element);
+        element.src = g.url;
+        const sg = new SuperGif({gif: element});
+        sg.load(() => {
+            sg.pause();
+
+            videos.push(new VideoTime(element, g.offset, sg.get_length(), g.beats, vT => {
+                const frame = (vT.offset + vT.fraction * vT.loopLength) % sg.get_length();
+                sg.move_to(frame);
+            }));
+            dance.addGif(gifName, sg.get_canvas());
+        });
+        sg.get_canvas().hidden = true;
+    }
+    dance.mode = "TILE";
+    dance.toDraw = ["duck", "triangle"];
+
+    const tapper = new Tapper();
+
+    const help = document.getElementById("help");
+
+    document.addEventListener('keydown', ev => {
+        switch (ev.key) {
+            case ' ':
+                return tapper.tap(ev.timeStamp);
+            case '1':
+                dance.mode = "FILL";
+                dance.toDraw = ["triangle"];
+                return;
+            case '2':
+                dance.mode = "FILL";
+                dance.toDraw = ["duck"];
+                return;
+            case '3':
+                dance.mode = "TILE";
+                dance.toDraw = ["duck", "triangle"];
+                return;
+            case 'ArrowUp':
+                dance.tileHeight += 50;
+                return;
+            case 'ArrowDown':
+                dance.tileHeight -= 50;
+                return;
+            case 'ArrowRight':
+                dance.tileWidth += 50;
+                return;
+            case 'ArrowLeft':
+                dance.tileWidth -= 50;
+                return;
+            case 'W':
+            case 'w':
+                tapper.multiply(0.5);
+                return;
+            case 'S':
+            case 's':
+                tapper.multiply(2);
+                return;
+            case 'H':
+            case 'h':
+                help.toggleAttribute('open');
+                return;
+        }
+    });
+
+    function doubleTime() {
+        tapper.multiply(0.5);
+    }
+    function halfTime() {
+        tapper.multiply(2);
+    }
+
+    function update(time) {
+        const nextBeat = tapper.whenNextBeat(time);
+        for (let v of videos) {
+            v.update(time, tapper.lastBeat, nextBeat);
+        }
+        dance.draw();
+        requestAnimationFrame(update);
+    }
+
+    requestAnimationFrame(update);
+</script>
+
+</body>
+</html>
