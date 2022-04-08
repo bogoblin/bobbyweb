@@ -15,6 +15,7 @@
 <body style="margin: 0; height: 100%; width: 100%; overflow: hidden">
 <script src="./VideoTime.js"></script>
 <script src="./Tapper.js"></script>
+<script src="./BeatMan.js"></script>
 <script src="./DanceCanvas.js"></script>
 <script src="./libgif.js"></script>
 <script>
@@ -28,6 +29,11 @@
             url: './Loop%20Videos/triangle_4.gif',
             offset: 0,
             beats: 4,
+        },
+        "caramell": {
+            url: './Loop%20Videos/caramell.gif',
+            offset: 6,
+            beats: 2,
         }
     };
 </script>
@@ -38,6 +44,7 @@
         <li>Press W or S to double or half the speed</li>
         <li>Press the number keys to change modes</li>
         <li>Arrow Keys change the size of the tiles</li>
+        <li>Press O to reset the animations to first beat without changing the tempo</li>
         <li>Press H to show or hide this help box</li>
     </ul>
     <p>The images can take a few moments to load - be patient!</p>
@@ -68,6 +75,7 @@
     dance.toDraw = ["duck", "triangle"];
 
     const tapper = new Tapper();
+    const beat = new BeatMan();
 
     const help = document.getElementById("help");
 
@@ -76,17 +84,13 @@
             case ' ':
                 return tapper.tap(ev.timeStamp);
             case '1':
-                dance.mode = "FILL";
-                dance.toDraw = ["triangle"];
-                return;
+                return dance.fill("triangle");
             case '2':
-                dance.mode = "FILL";
-                dance.toDraw = ["duck"];
-                return;
+                return dance.fill("duck");
             case '3':
-                dance.mode = "TILE";
-                dance.toDraw = ["duck", "triangle"];
-                return;
+                return dance.fill("caramell");
+            case '4':
+                return dance.tile(["triangle", "duck", "caramell"])
             case 'ArrowUp':
                 dance.tileHeight += 50;
                 return;
@@ -111,6 +115,14 @@
             case 'h':
                 help.toggleAttribute('open');
                 return;
+            case 'O':
+            case 'o':
+                tapper.lastBeat = ev.timeStamp;
+                tapper.whenNextBeat(ev.timeStamp);
+                for (let v of videos) {
+                    v.fraction = 0;
+                }
+                return;
         }
     });
 
@@ -123,8 +135,10 @@
 
     function update(time) {
         const nextBeat = tapper.whenNextBeat(time);
+        const posInBeat = beat.update(time, tapper.lastBeat, nextBeat);
+
         for (let v of videos) {
-            v.update(time, tapper.lastBeat, nextBeat);
+            v.update(posInBeat);
         }
         dance.draw();
         requestAnimationFrame(update);
