@@ -70,7 +70,7 @@ piss Stephen off even more.</p>
         el.appendChild(week);
         for (let j=0; j<7; j++) {
             const day = document.createElement('td');
-            day.innerHTML = `${i}.${j}`;
+            day.innerHTML = `${i.toString(7)}.${j}`;
             el.appendChild(day);
         }
         calendar.appendChild(el);
