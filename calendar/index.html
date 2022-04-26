@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bobby's Calendar</title>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+</head>
+<style>
+    @font-face {
+        font-family: Oliciy;
+        src: url("../Oliciy.woff");
+    }
+    body {
+
+        font-family: 'Oliciy', sans-serif;
+    }
+    time {
+        font-family: monospace;
+        font-style: italic;
+        font-size: small;
+        color: #666666;
+    }
+    td > header {
+        font-size: larger;
+    }
+    th {
+        width: 10%;
+    }
+    td {
+        vertical-align: top;
+    }
+    p {
+        font-family: Serif;
+    }
+</style>
+<body>
+<h1>Bobby's 2022 Calendar</h1>
+<p>Months are fucking dog shit honestly. This is my new calendar which I will
+    use henceforthward. </p>
+<p>Sunday is 0, Monday is 1, andsoforthonwards.</p>
+<p>I have decided to use septimal (base-seven) for the week numbers just to
+piss Stephen off even more.</p>
+<table id="calendar">
+    <tr>
+        <th></th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+</table>
+<script>
+    const calendar = document.getElementById('calendar');
+    let firstSunday = dayjs('2022-01-01');
+    firstSunday = firstSunday.day(0);
+
+    const weekZero = firstSunday;
+
+    for (let i=1; i<=52; i++) {
+        const thisWeek = weekZero.add(i, 'week');
+        const el = document.createElement('tr');
+        const week = document.createElement('td');
+        week.innerHTML = `
+        <header>Week ${i.toString(7)}</header>
+        <time>${thisWeek.format('D MMM YYYY')} - ${thisWeek.add(1, 'week').format('D MMM YYYY')}</time>
+        `;
+        el.appendChild(week);
+        for (let j=0; j<7; j++) {
+            const day = document.createElement('td');
+            day.innerHTML = `${i}.${j}`;
+            el.appendChild(day);
+        }
+        calendar.appendChild(el);
+    }
+</script>
+</body>
+</html>
