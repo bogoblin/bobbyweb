@@ -18,7 +18,7 @@
 - Completed a paid summer project where I designed and created an automated testing system for programming coursework.
   - **Bootstrap** and **JQuery** for the front end and **Node.js** on the backend. Conducted user testing and surveys to improve the UI post launch.
 - Also participated in ACM ICPC (International Collegiate Programming Contest) events, including going to University of Bath for the North West Europe regionals.
-- Organised the Staff Vs Student contest in 2018 and 2019, a ICPC-style event for the Computer Science department.
+- Created original problems and organised the Staff Vs Student contest in 2018 and 2019, a ICPC-style event for the Computer Science department.
 
 ## Projects
 
