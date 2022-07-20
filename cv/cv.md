@@ -23,5 +23,5 @@
 ## Projects
 
 - EasyLaser, my third year project, is a 3D game made in that teaches you how to sail in different wind conditions. Playable with a gamepad [here](https://bogoblin.com/games/2019/05/11/EasyLaser.html)
-- Onlinesweeper - a massively multiplayer online infinite Minesweeper game, written in Node.js and **React**. Currently re-writing in Rust, but an instance of the JS version is still online to try [here](https://onlinesweeper-5i7y9.ondigitalocean.app/) (warning, quite addictive)
+- Onlinesweeper - a massively multiplayer online infinite Minesweeper game, written in Node.js and **React**. Not yet finished, but a working instance is online to try [here](https://onlinesweeper-5i7y9.ondigitalocean.app/) (warning, quite addictive)
 - Participated in game jams and hackathons. You can see these mini-projects on my website [bogoblin.com](https://bogoblin.com)
