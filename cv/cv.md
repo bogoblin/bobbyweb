@@ -1,5 +1,4 @@
 ## Spareroom 
-
 *Software Developer | August 2021 - Present*
 
 - Backend development for a popular website using **Perl** and **MySQL**.
@@ -7,7 +6,6 @@
 - Created a domain specific language for localising strings in our backend, to assist in launching international versions of the site.
 
 ## Digital Applications International (DAI)
-
 *Software Developer | September 2019 - October 2020*
 
 - **Java** backend development with **Spring**, for the CMS, a system to manage shipping options from warehouses to their customers, and to produce printable labels for parcels.
