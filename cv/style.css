@@ -1,7 +1,8 @@
 body {
+    position: relative;
     font-family: 'Rubik', sans-serif;
-    padding: 0;
-    margin: 20px auto;
+    padding: 5px;
+    margin: auto;
     font-size: 13pt;
     max-width: 50em;
 }
