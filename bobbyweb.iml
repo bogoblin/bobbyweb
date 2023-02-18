@@ -4,6 +4,6 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="dayjs" level="application" />
+    <orderEntry type="library" name="7d1906307c" level="application" />
   </component>
 </module>
