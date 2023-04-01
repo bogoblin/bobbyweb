@@ -2,9 +2,9 @@
 <html>
     <script>
         function playQueen() {
-            let utterance = new SpeechSynthesisUtterance("Queen!");
+            speechSynthesis.pause(); speechSynthesis.cancel(); speechSynthesis.resume(); let utterance = new SpeechSynthesisUtterance("Queen!");
             speechSynthesis.speak(utterance);
-        }
+        } 
     </script>
 <body>
     <center>
