@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OKLCH Inverter</title>
+</head>
+<body>
+<img src="./lightningbolt.jpg" alt="" id="toInvert">
+</body>
+<script src="https://colorjs.io/dist/color.global.js"></script>
+<script>
+function invert(image) {
+    const canvas = document.createElement('canvas');
+
+    const onLoaded = function () {
+        const width = image.naturalWidth;
+        const height = image.naturalHeight;
+        canvas.width = width;
+        canvas.height = height;
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(image, 0, 0, width, height);
+
+        const imageData = ctx.getImageData(0, 0, width, height);
+        // const colorSpace = imageData.colorSpace === 'srgb' ? 'srgb' : 'p3';
+        const data = imageData.data;
+
+        for (let i = 0; i < data.length; i += 4) {
+            const color = new Color('srgb', [data[i]/255, data[i+1]/255, data[i+2]/255]);
+            color.lch[0] = 100 - color.lch[0];
+            // console.log(color)
+            data[i] = color.srgb.r * 255
+            data[i+1] = color.srgb.g * 255
+            data[i+2] = color.srgb.b * 255
+            // break
+        }
+        ctx.putImageData(imageData, 0, 0);
+    }
+    if (image.complete) {
+        onLoaded();
+    } else {
+        image.onload = onLoaded();
+    }
+
+    return canvas;
+}
+
+document.body.append(invert(document.getElementById('toInvert')))
+</script>
+</html>
