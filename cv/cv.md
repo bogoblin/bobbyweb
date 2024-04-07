@@ -1,10 +1,11 @@
-## Spareroom 
-*Software Developer | August 2021 - Present*
+## SpareRoom 
+*Software Developer | August 2021 - November 2023*
 
-- Backend development for a popular website using **Perl** and **MySQL**.
-- Designed, implemented, and evaluated a system for detecting abuse from users posting duplicate adverts.
-- Created a domain specific language for localising strings in our backend, to assist in launching international versions of the site.
-- Configured **Apache** and **Docker** for new domains.
+- Backend development for a popular website with many users.
+- Designed and implemented new features for the site using **Perl** and **MySQL**, as well as fixing bugs and improving existing features.
+- Evaluated ideas and changes by analysing the data using **Jupyter notebooks** and **Python**.
+- Assisted in moving our development environment from **Vagrant** to **Docker**.
+- Improved many parts of our build process, such as using **Terraform** to deploy our **Google Cloud Functions**, streamlining our **Jenkins** build pipeline, and automating actions in our Github repo with **Github Actions**.
 
 ## Digital Applications International (DAI)
 *Software Developer | September 2019 - October 2020*
