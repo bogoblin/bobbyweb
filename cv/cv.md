@@ -28,7 +28,7 @@ developers.
 ## SpareRoom 
 *Software Developer | August 2021 - *
 
-- Backend development for a popular website with many users.
+- Backend development on a legacy codebase of a popular website with many users.
 - Designed and implemented new features for the site using **Perl** and **MySQL**, as well as fixing bugs and improving existing features.
 - Evaluated ideas and changes by analysing the data using **Jupyter notebooks** and **Python**.
 - Assisted in moving our development environment from **Vagrant** to **Docker**.
