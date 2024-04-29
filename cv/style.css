@@ -65,7 +65,7 @@ tr.header {
     vertical-align: top;
 }
 tr.header th {
-    padding-right: 10mm;
+    padding-right: 7mm;
 }
 table {
     border-collapse: collapse;
@@ -73,7 +73,7 @@ table {
 td {
     border-top: rgba(0, 0, 0, 0.15) 1px solid;
     vertical-align: top;
-    padding: 0.5em;
+    padding: 0.4em;
 }
 
 @page {
@@ -81,7 +81,6 @@ td {
 }
 @page:first {
     margin-top: 2.5cm;
-    margin-bottom: 2.5cm;
 }
 
 @media print {

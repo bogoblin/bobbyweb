@@ -4,24 +4,26 @@ years of experience as a working software engineer at two companies, exploring
 a wide range of technologies. I like my builds fast, my tasks automated,
 and my tests green.
 
-I'm currently based in south Manchester, and I am
+I'm currently based in South Manchester, and I am
 looking for a hybrid or remote role where I can solve problems
 in a robust and efficient manner, whilst learning from more experienced
 developers.
 
 ## Skills
 
-| Technology | Professional Experience | Utilised                                                                                                      |
-|------------|-------------------------|---------------------------------------------------------------------------------------------------------------|
-| Perl       | 2½ years                | 2024 - As the primary backend language at SpareRoom                                                           |
-| MySQL      | 4 years                 | 2024 - At both SpareRoom and DAI                                                                              |
-| Python     | 3 years                 | 2024 - For data science reports at SpareRoom as well as on the COMPJudge project at UoM                       |
-| Docker     | 2 years                 | 2024 - Maintained the dev tools at SpareRoom                                                                  |
-| Javascript | 4 years                 | 2024 - Frontend work on dev and admin tools at SpareRoom and DAI, as well as a backend language for COMPJudge |
-| Linux      | 5 years                 | 2024 - Daily as a desktop OS and on web servers at SpareRoom and DAI                                          |
-| GitHub     | 3 years                 | 2024 - Used extensively for hosting code and configuring CI/CD                                                |
-| GoLang     | 2 months                | 2023 - Helped maintain the cloud functions at SpareRoom                                                       |
-| Java       | 1 year                  | 2020 - Backend language at DAI                                                                                |
+| Technology               | Professional Experience | Utilised                                                                                                      |
+|--------------------------|-------------------------|---------------------------------------------------------------------------------------------------------------|
+| Perl                     | 2½ years                | 2024 - As the primary backend language at SpareRoom                                                           |
+| MySQL                    | 4 years                 | 2024 - At both SpareRoom and DAI                                                                              |
+| Python                   | 3 years                 | 2024 - For data science reports at SpareRoom as well as on the COMPJudge project at UoM                       |
+| Docker                   | 2 years                 | 2024 - Maintained the dev tools at SpareRoom                                                                  |
+| Javascript               | 4 years                 | 2024 - Frontend work on dev and admin tools at SpareRoom and DAI, as well as a backend language for COMPJudge |
+| Linux                    | 5 years                 | 2024 - Daily as a desktop OS and on web servers at SpareRoom and DAI                                          |
+| GitHub                   | 3 years                 | 2024 - Used extensively for hosting code and configuring CI/CD                                                |
+| GoLang                   | 2 months                | 2023 - Helped maintain the cloud functions at SpareRoom                                                       |
+| Java                     | 1 year                  | 2020 - Backend language at DAI                                                                                |
+| API Development          | 4 years                 | 2024 - Developed API specs with OpenAPI and WSDL                                                              |
+| IntelliJ/Jetbrains Suite | 5 years                 | 2024 - My IDE of choice since 2017                                                                            |
 
 <div class="pagebreak"></div>
 
@@ -42,11 +44,11 @@ developers.
 - **Java** backend development with **Spring** and **Hibernate**, for the CMS, a system to manage shipping options from warehouses to their customers, and to produce printable labels for parcels.
 - Championed unit testing with **JUnit** and **Mockito**.
 - Wrote code to connect to external **JSON** and **SOAP** APIs.
-- Worked on new and existing **SOAP** APIs for our product.
+- Worked on new and existing SOAP APIs for our product.
 - Left in October 2020 to pursue new opportunities.
 
 ## University of Manchester
-*BSc Computer Science - 1st Class Degree, 2019*
+*B.Sc. Computer Science - 1st Class Degree, 2019*
  
 - Created COMPJudge as a paid summer project, which is an automated testing system for programming coursework.
   - **Bootstrap** and **JQuery** for the front end and **Node.js** on the backend. Conducted user testing and surveys to improve the UI post launch.
