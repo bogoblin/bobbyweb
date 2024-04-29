@@ -60,9 +60,20 @@ div.column {
     justify-content: flex-start;
 }
 
+tr.header {
+    text-align: left;
+    vertical-align: top;
+}
+tr.header th {
+    padding-right: 10mm;
+}
+tr {
+    border-bottom: #666666 1px solid;
+}
+
 @page {
-    margin-top: 8mm;
-    margin-bottom: 8mm;
+    margin-top: 20mm;
+    margin-bottom: 30mm;
 }
 
 @media print {
