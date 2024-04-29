@@ -1,7 +1,8 @@
 Hi, I'm Bobby. I studied **Computer Science** at the **University of Manchester**, 
 graduating with a **1st class** degree in 2019. Since then, I have had four
 years of experience as a working software engineer at two companies, exploring
-a wide range of technologies. I'm looking for a role where I can solve problems
+a wide range of technologies. I'm currently based in south Manchester, and I am
+looking for a hybrid or remote role where I can solve problems
 in a robust and efficient manner, whilst learning from more experienced
 developers.
 
