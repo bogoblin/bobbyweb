@@ -23,6 +23,7 @@ developers.
 | GoLang     | 2 months                | 2023 - Helped maintain the cloud functions at SpareRoom                                                       |
 | Java       | 1 year                  | 2020 - Backend language at DAI                                                                                |
 
+<div class="pagebreak"></div>
 
 ## SpareRoom 
 *Software Developer | August 2021 - *
@@ -34,8 +35,6 @@ developers.
 - Wrote **Google Cloud Functions** in **GoLang** and used **Terraform** to deploy them.
 - Improved many parts of our build process, such as speeding up our **Jenkins** build pipeline, and automating actions in our GitHub repo with **GitHub Actions**.
 - Created internal tools for the web dashboard, using **JavaScript**, **TypeScript** and **React**.
-
-<div class="pagebreak"></div>
 
 ## Digital Applications International (DAI)
 *Software Developer | September 2019 - October 2020*

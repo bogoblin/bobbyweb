@@ -73,10 +73,11 @@ table {
 td {
     border-top: rgba(0, 0, 0, 0.15) 1px solid;
     vertical-align: top;
+    padding: 0.5em;
 }
 
 @page {
-    margin-top: 20mm;
+    margin-top: 10mm;
     margin-bottom: 20mm;
 }
 
@@ -85,7 +86,7 @@ td {
         display: none;
     }
     .pagebreak {
-        page-break-before: always;
+        page-break-after: always;
     }
 
     body {
@@ -104,5 +105,8 @@ td {
     div.header {
         grid-template-columns: 0 1fr;
         grid-gap: 0;
+    }
+    em {
+        font-style: italic;
     }
 }
