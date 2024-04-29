@@ -67,13 +67,17 @@ tr.header {
 tr.header th {
     padding-right: 10mm;
 }
-tr {
-    border-bottom: #666666 1px solid;
+table {
+    border-collapse: collapse;
+}
+td {
+    border-top: rgba(0, 0, 0, 0.15) 1px solid;
+    vertical-align: top;
 }
 
 @page {
     margin-top: 20mm;
-    margin-bottom: 30mm;
+    margin-bottom: 20mm;
 }
 
 @media print {

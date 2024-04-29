@@ -19,7 +19,6 @@ developers.
 | GoLang     | 2 months                | 2023 - Helped maintain the cloud functions at SpareRoom                                                       |
 | Java       | 1 year                  | 2020 - Backend language at DAI                                                                                |
 
-<div class="pagebreak"></div>
 
 ## SpareRoom 
 *Software Developer | August 2021 - *
@@ -32,11 +31,15 @@ developers.
 - Improved many parts of our build process, such as speeding up our **Jenkins** build pipeline, and automating actions in our GitHub repo with **GitHub Actions**.
 - Created internal tools for the web dashboard, using **JavaScript**, **TypeScript** and **React**.
 
+<div class="pagebreak"></div>
+
 ## Digital Applications International (DAI)
 *Software Developer | September 2019 - October 2020*
 
-- **Java** backend development with **Spring**, for the CMS, a system to manage shipping options from warehouses to their customers, and to produce printable labels for parcels.
+- **Java** backend development with **Spring** and **Hibernate**, for the CMS, a system to manage shipping options from warehouses to their customers, and to produce printable labels for parcels.
 - Championed unit testing with **JUnit** and **Mockito**.
+- Wrote code to connect to external **JSON** and **SOAP** APIs.
+- Worked on new and existing **SOAP** APIs for our product.
 - Left in October 2020 to pursue new opportunities.
 
 ## University of Manchester
