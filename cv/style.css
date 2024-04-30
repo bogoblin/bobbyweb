@@ -1,9 +1,8 @@
 body {
     position: relative;
     font-family: 'Rubik', sans-serif;
-    padding: 5px;
+    padding: 0.5em;
     margin: auto;
-    font-size: 13pt;
     max-width: 50em;
 }
 div.header {
@@ -32,7 +31,7 @@ div.section {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 300%;
     margin: 0;
     display: block;
 }
@@ -95,6 +94,7 @@ td {
         font-size: 12pt;
         margin: 0;
         max-width: none;
+        padding: 0;
     }
     div.header a {
         text-decoration: none;

@@ -11,19 +11,19 @@ developers.
 
 ## Skills
 
-| Technology               | Professional Experience | Utilised                                                                                                      |
-|--------------------------|-------------------------|---------------------------------------------------------------------------------------------------------------|
-| Perl                     | 2½ years                | 2024 - As the primary backend language at SpareRoom                                                           |
-| MySQL                    | 4 years                 | 2024 - At both SpareRoom and DAI                                                                              |
-| Python                   | 3 years                 | 2024 - For data science reports at SpareRoom as well as on the COMPJudge project at UoM                       |
-| Docker                   | 2 years                 | 2024 - Maintained the dev tools at SpareRoom                                                                  |
-| Javascript               | 4 years                 | 2024 - Frontend work on dev and admin tools at SpareRoom and DAI, as well as a backend language for COMPJudge |
-| Linux                    | 5 years                 | 2024 - Daily as a desktop OS and on web servers at SpareRoom and DAI                                          |
-| GitHub                   | 3 years                 | 2024 - Used extensively for hosting code and configuring CI/CD                                                |
-| GoLang                   | 2 months                | 2023 - Helped maintain the cloud functions at SpareRoom                                                       |
-| Java                     | 1 year                  | 2020 - Backend language at DAI                                                                                |
-| API Development          | 4 years                 | 2024 - Developed API specs with OpenAPI and WSDL                                                              |
-| IntelliJ/Jetbrains Suite | 5 years                 | 2024 - My IDE of choice since 2017                                                                            |
+| Technology               | Professional Experience | Utilised                                                                                               |
+|--------------------------|-------------------------|--------------------------------------------------------------------------------------------------------|
+| Perl                     | 2½ years                | As the primary backend language at SpareRoom                                                           |
+| MySQL                    | 4 years                 | At both SpareRoom and DAI                                                                              |
+| Python                   | 3 years                 | For data science reports at SpareRoom as well as on the COMPJudge project at UoM                       |
+| Docker                   | 2 years                 | Maintained the dev tools at SpareRoom                                                                  |
+| Javascript               | 4 years                 | Frontend work on dev and admin tools at SpareRoom and DAI, as well as a backend language for COMPJudge |
+| Linux                    | 5 years                 | Daily as a desktop OS and on web servers at SpareRoom and DAI                                          |
+| GitHub                   | 3 years                 | Used extensively for hosting code and configuring CI/CD                                                |
+| GoLang                   | 2 months                | Helped maintain the cloud functions at SpareRoom                                                       |
+| Java                     | 1 year                  | Backend language at DAI                                                                                |
+| API Development          | 4 years                 | Developed API specs with OpenAPI and WSDL                                                              |
+| IntelliJ/Jetbrains Suite | 5 years                 | My IDE of choice since 2017                                                                            |
 
 <div class="pagebreak"></div>
 
