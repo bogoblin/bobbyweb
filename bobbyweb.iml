@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="7d1906307c" level="application" />
     <orderEntry type="library" name="color.global" level="application" />
+    <orderEntry type="library" name="dayjs" level="application" />
   </component>
 </module>

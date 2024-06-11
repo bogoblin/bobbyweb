@@ -31,7 +31,7 @@ div.section {
 }
 
 h1 {
-    font-size: 300%;
+    font-size: 200%;
     margin: 0;
     display: block;
 }
@@ -76,10 +76,11 @@ td {
 }
 
 @page {
-    margin-top: 0.5cm;
+    margin-top: 1.5cm;
+    margin-bottom: auto;
 }
 @page:first {
-    margin-top: 2.5cm;
+    /*margin-top: 2.5cm;*/
 }
 
 @media print {
@@ -91,7 +92,7 @@ td {
     }
 
     body {
-        font-size: 12pt;
+        font-size: 10pt;
         margin: 0;
         max-width: none;
         padding: 0;
