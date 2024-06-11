@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Garfield Extension (for all modern browsers)"
-category: Toys
+title:  "Garfield Browser Extension"
+category: Fun
 image: garfield/screen1.png
 redirect: /garfield
 ---

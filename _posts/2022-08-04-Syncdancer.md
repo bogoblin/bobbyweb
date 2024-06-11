@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Syncdancer"
-category: Toys
+category: Fun
 image: img/syncdancer.png
 redirect: /syncdancer
 ---

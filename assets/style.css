@@ -1,6 +1,6 @@
 @font-face {
     font-family: Oliciy;
-    src: url("../Oliciy.woff");
+    src: url("/Oliciy.woff");
 }
 .center * {
     text-align: center;
@@ -16,12 +16,17 @@ img.center {
     --margin: calc(var(--left-margin) - var(--pad));
     --dark-bg: rgba(0,0,0,0.92);
 }
+html {
+    height: 100%;
+}
 body {
     font-family: Oliciy, sans-serif;
     background-image: url("../img/colourbg.png");
     background-repeat: repeat;
+    background-size: auto;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 img.header {
     width: 100%;
@@ -42,6 +47,21 @@ ul.scroll-section{
     display: flex;
     overflow-x: scroll;
     gap: 10px;
+}
+@media only screen and (orientation: portrait) {
+    .home {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+    }
+
+    ul.scroll-section{
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-x: hidden;
+        width: min-content;
+    }
 }
 li {
     background-color: var(--dark-bg);
@@ -68,6 +88,7 @@ li {
 .scroll-section figure figcaption {
     font-family: Oliciy, sans-serif;
     color: white;
+    font-size: 1.6em;
 }
 article {
     margin: 0 var(--margin);
