@@ -1,8 +1,7 @@
 Hi, I'm Bobby. I studied **Computer Science** at the **University of Manchester**, 
-graduating with a **1st class** degree in 2019. Since then, I have had four
+graduating with a first class degree in 2019. Since then, I have had four
 years of experience as a working software engineer exploring
-a wide range of technologies. I like my builds fast, my tasks automated,
-and my tests green.
+a wide range of technologies.
 
 ## SpareRoom 
 *Software Developer | 2½ years*
@@ -10,21 +9,20 @@ and my tests green.
 Primarily back-end engineering using **Perl** and **MySQL**. I have also worked on a number of front-end projects
 using **JavaScript**, **JQuery**, **TypeScript** and **React**. My work here has involved:
 
-- Writing a domain specific language for perl comments so that we could localise every string in the codebase to US English and French.
+- Writing a domain specific language and parser for perl comments so that we could localise our site.
 - Sped up the deployment process by 12X by parallelizing everything.
-- Wrote a bunch of **Github Actions** to automatically check for some commonly occurring issues.
+- Wrote a bunch of **Github Actions** for linting, testing, and building the codebase.
 - Prevented someone from being fired by finding and fixing a bug in the admin panel.
 
 ## Digital Applications International (DAI)
 *Software Developer | 1 year*
 
-Did a little stint here until I got burned out by COVID. I was writing **Java** backend code for a **Spring** based web application
+I was writing **Java** backend code for a **Spring** based web application
 that multiple high-profile companies were using. In this time, I:
 
-- Wrote what I now realise was a horrible abstract class for making HTTP requests to various APIs. It worked though.
-- Read many large PDFs from shipping companies about the arcane details of their APIs, and wrote schemas and interfaces for them.
-- Championed unit testing with **JUnit** and **Mockito**.
-- Wrote various internal tools to improve the deployment process, which was just ssh'ing into servers and running commands.
+- Wrote application code that communicated with the APIs of the shipping companies we were working with.
+- Championed the use of unit testing with **JUnit** and **Mockito**.
+- Wrote various internal tools to improve the deployment process by moving repetitive tasks to a Jenkins continuous integration server.
 - Had up to 12 terminal windows open at once for checking logs for one of our customers.
 
 ## University of Manchester
@@ -34,8 +32,8 @@ Apart from doing pretty well academically, I was also involved in some relevant 
 
 - Participated in ACM ICPC (International Collegiate Programming Contest) events, including going to University of Bath for the North West Europe regionals. We wrote our solutions in **C++** so that we didn't have to deal with a garbage collector.
 - Created original problems and organised the Staff Vs Student contest in 2018 and 2019, a ICPC-style event for the Computer Science department. This included setting up the web server, which is a **PHP** application called DOMjudge.
-- This lead to me doing a paid summer project where I created COMPJudge, an online automated testing system for programming coursework. This was used for the algorithms courses and mostly worked well. I was a TA on that course and helped the students and other TAs with the system.
-- Taught Python programming to non-CS students.
+- This lead to me doing a paid summer project where I created COMPJudge, an online automated testing system for programming coursework. It was written in a mixture of **Node.js**, **Python** and **C**, with **Bootstrap** and **JQuery** on the frontend. I was a TA on that course and helped the students and other TAs use the system.
+- Taught Python programming to non-CS students as part of a Computer Science society (UniCS) effort.
 
 ## Projects
 
