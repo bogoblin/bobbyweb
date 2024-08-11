@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Album</title>
+</head>
+<style>
+    .photo-album {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: inline mandatory;
+    }
+    .photo-album img {
+        height: 300px;
+        scroll-snap-align: center;
+    }
+    .photo-nav img {
+        height: 50px;
+    }
+</style>
+<body>
+<div class="photo-album">
+    <img src="Riven_Desktop_Backgrounds/Mag_Lev.jpg" id="Mag_Lev">
+    <img src="Riven_Desktop_Backgrounds/Prison_Island.jpg" id="Prison_Island">
+    <img src="Riven_Desktop_Backgrounds/Rebel_Hive.jpg" id="Rebel_Hive">
+    <img src="Riven_Desktop_Backgrounds/Sunner_Lagoon.jpg" id="Sunner_Lagoon">
+    <img src="Riven_Desktop_Backgrounds/Temple_Dome.jpg" id="Temple_Dome">
+</div>
+<div class="photo-nav">
+    <a href="#Mag_Lev"><img src="Riven_Desktop_Backgrounds/Mag_Lev.jpg"></a>
+    <a href="#Prison_Island"><img src="Riven_Desktop_Backgrounds/Prison_Island.jpg"></a>
+    <a href="#Rebel_Hive"><img src="Riven_Desktop_Backgrounds/Rebel_Hive.jpg"></a>
+    <a href="#Sunner_Lagoon"><img src="Riven_Desktop_Backgrounds/Sunner_Lagoon.jpg"></a>
+    <a href="#Temple_Dome"><img src="Riven_Desktop_Backgrounds/Temple_Dome.jpg"></a>
+</div>
+</body>
+</html>
