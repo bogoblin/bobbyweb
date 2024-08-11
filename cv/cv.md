@@ -4,7 +4,7 @@ years of experience as a working software engineer exploring
 a wide range of technologies.
 
 ## SpareRoom 
-*Software Developer | 2½ years*
+*Software Developer | August 2021 - November 2023*
 
 Primarily back-end engineering using **Perl** and **MySQL**. I have also worked on a number of front-end projects
 using **JavaScript**, **JQuery**, **TypeScript** and **React**. My work here has involved:
@@ -15,7 +15,7 @@ using **JavaScript**, **JQuery**, **TypeScript** and **React**. My work here has
 - Prevented someone from being fired by finding and fixing a bug in the admin panel.
 
 ## Digital Applications International (DAI)
-*Software Developer | 1 year*
+*Software Developer | September 2019 - October 2020*
 
 I was writing **Java** backend code for a **Spring** based web application
 that multiple high-profile companies were using. In this time, I:
