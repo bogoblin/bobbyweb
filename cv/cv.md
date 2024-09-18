@@ -11,7 +11,7 @@ using **JavaScript**, **JQuery**, **TypeScript** and **React**. My work here has
 
 - Writing a domain specific language and parser for perl comments so that we could localise our site.
 - Sped up the deployment process by 12X by parallelizing everything.
-- Wrote a bunch of **Github Actions** for linting, testing, and building the codebase.
+- Improved build, testing and deployment processes with Jenkins, Docker, Terraform, Bash scripts, and more for our GCP based infrastructure.
 - Prevented someone from being fired by finding and fixing a bug in the admin panel.
 
 ## Digital Applications International (DAI)

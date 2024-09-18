@@ -7,13 +7,21 @@
 <style>
     .photo-album {
         display: flex;
-        width: 100%;
-        overflow-x: scroll;
+        flex-direction: row;
+        /*width: 0;*/
+        overflow-inline: scroll;
         scroll-snap-type: inline mandatory;
+        scroll-behavior: smooth;
     }
     .photo-album img {
         height: 300px;
         scroll-snap-align: center;
+    }
+    .photo-album img:first-child {
+        margin-left: 50%;
+    }
+    .photo-album img:last-child {
+        margin-right: 50%;
     }
     .photo-nav img {
         height: 50px;
